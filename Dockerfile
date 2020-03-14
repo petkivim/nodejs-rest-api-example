@@ -1,6 +1,6 @@
 FROM node:12-alpine
 
-# ENV PORT=4000
+ENV PORT=4000
 
 WORKDIR /usr/src/app
 
