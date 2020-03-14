@@ -1,5 +1,7 @@
 FROM node:12-alpine
 
+# ENV PORT=4000
+
 WORKDIR /usr/src/app
 
 # Install dependencies
@@ -9,5 +11,5 @@ RUN npm install
 # Copy source
 COPY server.js /usr/src/app
 
-EXPOSE 4000
+EXPOSE $PORT
 CMD [ "npm", "start" ]

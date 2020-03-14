@@ -3,6 +3,8 @@
 var express = require('express');
 var app = express();
 
+app.set("port", process.env.PORT || 4000);
+
 app.get('/', function (req, res) {
    res.writeHead(200, {'Content-Type': 'application/json'});
    var response = { "response" : "This is GET method." }
@@ -33,7 +35,7 @@ app.delete('/', function (req, res) {
    res.end(JSON.stringify(response));
 })
 
-var server = app.listen(4000, function () {
+var server = app.listen(app.get("port"), function () {
 
   var host = server.address().address
   var port = server.address().port
