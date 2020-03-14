@@ -4,12 +4,12 @@
   "description": "Example of Node.js REST API on Docker",
   "author": "Petteri Kivimäki <dinky_jackson@hotmail.com.com>",
   "main": "server.js",
-  "license" : "MIT",
-  "repository" : "https://github.com/petkivim/nodejs-rest-api-example.git",
+  "license": "MIT",
+  "repository": "https://github.com/petkivim/nodejs-rest-api-example.git",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.17.1"
   }
 }
