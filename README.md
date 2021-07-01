@@ -61,7 +61,7 @@ Transfer-Encoding: chunked
 #### POST /
 
 ```
-curl -i -x POST http://localhost:4000
+curl -i -X POST http://localhost:4000
 
 HTTP/1.1 200 OK
 X-Powered-By: Express
@@ -76,7 +76,7 @@ Transfer-Encoding: chunked
 #### PUT /
 
 ```
-curl -i -x PUT http://localhost:4000
+curl -i -X PUT http://localhost:4000
 
 HTTP/1.1 200 OK
 X-Powered-By: Express
@@ -91,7 +91,7 @@ Transfer-Encoding: chunked
 #### DELETE /
 
 ```
-curl -i -x DELETE http://localhost:4000
+curl -i -X DELETE http://localhost:4000
 
 HTTP/1.1 200 OK
 X-Powered-By: Express
