@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:22-alpine
 
 ENV PORT=4000
 
