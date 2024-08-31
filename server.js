@@ -40,11 +40,27 @@ app.delete('/', function (req, res) {
    res.end(JSON.stringify(response));
 })
 
-var server = app.listen(app.get("port"), function () {
+const server = app.listen(app.get("port"), function () {
 
-  var host = server.address().address
-  var port = server.address().port
+  const host = server.address().address
+  const port = server.address().port
 
   console.log("Node.js API app listening at http://%s:%s", host, port)
 
+})
+
+process.on('SIGINT', () => {
+  console.log('Received SIGINT. Closing server...')
+  server.close(() => {
+    console.log('Server closed. Exiting process...')
+    process.exit(0)
+  })
+})
+
+process.on('SIGTERM', () => {
+  console.log('Received SIGTERM. Closing server...')
+  server.close(() => {
+    console.log('Server closed. Exiting process...')
+    process.exit(0)
+  })
 })
