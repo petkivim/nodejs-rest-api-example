@@ -18,7 +18,7 @@ docker build -t nodejs-rest-api-example .
 
 Run in default port `4000`:
 ```
-docker run -p 4000:4000 -d nodejs-rest-api-example
+docker run --rm -p 4000:4000 -d nodejs-rest-api-example
 ```
 
 Run in custom port, e.g., `8080`:
