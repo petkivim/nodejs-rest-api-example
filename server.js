@@ -39,15 +39,14 @@ app.post('/', function (req, res) {
   res.end(JSON.stringify(response))
 })
 
-//Metodo post para obtener por medio del nombre
+//Metodo post para  mostrar por medio del nombre
 app.post('/:nombre', function (req, res) {
-  console.log('POST /:nombre request received')
+  console.log('POST /: nombre request received')
   res.writeHead(200, {'Content-Type': 'application/json'})
-  var response = { "response" : "This is POST method with nombre=" + req.params.nombre + "." }
+  var response = { "response" : "This is POST method." }
   console.log(response)
   res.end(JSON.stringify(response))
 })
-
 app.put('/', function (req, res) {
   console.log('PUT request received')
   res.writeHead(200, {'Content-Type': 'application/json'})
